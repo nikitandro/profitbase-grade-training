@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AppLayoutComponent } from '@app/widgets';
-import { DynamicRenderPage } from '@app/pages';
+import { DynamicRenderPageComponent, PatternsPageComponent } from '@app/pages';
 
 export const routes: Routes = [
   {
@@ -9,7 +9,16 @@ export const routes: Routes = [
     children: [
       {
         path: 'dynamic-render',
-        component: DynamicRenderPage,
+        component: DynamicRenderPageComponent,
+      },
+      {
+        path: 'patterns',
+        children: [
+          {
+            path: 'decorator',
+            component: PatternsPageComponent
+          }
+        ]
       }
     ]
   }

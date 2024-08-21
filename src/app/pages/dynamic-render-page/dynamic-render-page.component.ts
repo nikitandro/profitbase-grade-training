@@ -14,9 +14,12 @@ import { DividerModule } from 'primeng/divider';
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DynamicRenderPage {
+export class DynamicRenderPageComponent {
 
-  protected hostView = viewChild<HostDirective, ViewContainerRef>(HostDirective, { read: ViewContainerRef });
+  protected hostView = viewChild<HostDirective, ViewContainerRef>(
+    HostDirective,
+    { read: ViewContainerRef }
+  );
 
   public async loadBanner(): Promise<void> {
     const { BannerComponent } = await import('@app/shared');
