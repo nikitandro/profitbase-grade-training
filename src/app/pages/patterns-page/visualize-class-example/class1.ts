@@ -1,6 +1,9 @@
-import { registerClass } from '@app/shared';
+import { registerClass, validateProperty } from '@app/shared';
+
+const moreThanZero = (value: number) => value > 0;
 
 @registerClass
 export class Class1 {
-  a: number = 0;
+  @validateProperty([moreThanZero])
+  public a: number = 0;
 }

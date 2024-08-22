@@ -1,4 +1,5 @@
-<p-button (onClick)="loadBanner()">
+<input pInputText [(ngModel)]="bannerText"/>
+<p-button (onClick)="loadBanner(bannerText())">
   Render banner
 </p-button>
 <hr/>
