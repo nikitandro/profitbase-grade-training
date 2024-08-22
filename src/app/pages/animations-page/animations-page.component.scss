@@ -1,0 +1,35 @@
+@mixin block() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.blocks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+}
+
+.block-1 {
+    @include block();
+    background: var(--blue-400);
+    color: white;
+}
+
+.block-2 {
+    @include block();
+    background: var(--green-400);
+    color: white;
+}
+
+.block-3 {
+    @include block();
+    background: var(--pink-400);
+    color: white;
+}

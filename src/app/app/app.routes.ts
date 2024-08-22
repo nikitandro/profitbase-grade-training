@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { AppLayoutComponent } from '@app/widgets';
-import { DynamicRenderPageComponent, PatternsPageComponent } from '@app/pages';
+import { AnimationsPageComponent, DynamicRenderPageComponent, PatternsPageComponent } from '@app/pages';
 
 export const routes: Routes = [
   {
@@ -19,6 +19,10 @@ export const routes: Routes = [
             component: PatternsPageComponent
           }
         ]
+      },
+      {
+        path: 'animations',
+        component: AnimationsPageComponent,
       }
     ]
   }

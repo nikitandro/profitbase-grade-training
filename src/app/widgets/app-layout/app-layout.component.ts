@@ -31,6 +31,10 @@ export class AppLayoutComponent {
           routerLink: 'patterns/decorator',
         }
       ]
+    },
+    {
+      label: 'Animations',
+      routerLink: 'animations'
     }
   ];
 }
