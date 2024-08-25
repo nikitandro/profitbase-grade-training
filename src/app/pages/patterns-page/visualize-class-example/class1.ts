@@ -1,9 +1,11 @@
-import { registerClass, validateProperty } from '@app/shared';
-
-const moreThanZero = (value: number) => value > 0;
+import { emailValidator, registerClass } from '@app/shared';
 
 @registerClass
 export class Class1 {
-  @validateProperty([moreThanZero])
-  public a: number = 0;
+  @emailValidator
+  public email: string;
+
+  constructor(email: string) {
+    this.email = email;
+  }
 }
